@@ -30,32 +30,32 @@
   fill: transparent;
   transition: 0.3s ease;
 }
-.floor1__apartment-2:hover,
-.floor1__apartment-2:focus {
+.floor__apartment-2:hover,
+.floor__apartment-2:focus {
   fill: rgba(127, 191, 128, 0.3);
 }
-.floor1__apartment-3:hover,
-.floor1__apartment-3:focus {
+.floor__apartment-3:hover,
+.floor__apartment-3:focus {
   fill: rgba(254, 191, 148, 0.3);
 }
-.floor1__apartment-4:hover,
-.floor1__apartment-4:focus {
+.floor__apartment-4:hover,
+.floor__apartment-4:focus {
   fill: rgba(242, 149, 132, 0.3);
 }
-.floor1__apartment-5:hover,
-.floor1__apartment-5:focus {
+.floor__apartment-5:hover,
+.floor__apartment-5:focus {
   fill: rgba(142, 178, 240, 0.3);
 }
-.floor1__apartment-1:hover,
-.floor1__apartment-1:focus {
+.floor__apartment-1:hover,
+.floor__apartment-1:focus {
   fill: rgba(127, 223, 222, 0.3);
 }
-.floor1__apartment-7:hover,
-.floor1__apartment-7:focus {
+.floor__apartment-7:hover,
+.floor__apartment-7:focus {
   fill: rgba(191, 191, 255, 0.3);
 }
-.floor1__apartment-6:hover,
-.floor1__apartment-6:focus {
+.floor__apartment-6:hover,
+.floor__apartment-6:focus {
   fill: rgba(248, 217, 152, 0.3);
 }
 .popup_plan .subtitle {
