@@ -16,10 +16,18 @@ $(document).ready(function(){
     // положение курсора внутри элемента
     let Xinner = e.pageX - elem_left;
     let Yinner = e.pageY - elem_top;
-    if (Xinner < 466) {
+    if (Xinner < 466 && Yinner < 300) {
       $('.apartment__popup').css('right','180px');
-    } else {
-      $('.apartment__popup').css('right','760px');
+      $('.apartment__popup').css('top','60px');
+    } else if (Xinner < 466 && Yinner > 300) {
+      $('.apartment__popup').css('right','180px');
+      $('.apartment__popup').css('top','350px');
+    } else if (Xinner > 466 && Yinner > 300) {
+      $('.apartment__popup').css('right','600px');
+      $('.apartment__popup').css('top','350px');
+    } else if (Xinner > 466 && Yinner < 300) {
+      $('.apartment__popup').css('right','600px');
+      $('.apartment__popup').css('top','60px');
     }
   });
 });
