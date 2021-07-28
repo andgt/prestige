@@ -23,10 +23,10 @@ $(document).ready(function(){
       $('.apartment__popup').css('right','180px');
       $('.apartment__popup').css('top','350px');
     } else if (Xinner > 466 && Yinner > 300) {
-      $('.apartment__popup').css('right','600px');
+      $('.apartment__popup').css('right','635px');
       $('.apartment__popup').css('top','350px');
     } else if (Xinner > 466 && Yinner < 300) {
-      $('.apartment__popup').css('right','600px');
+      $('.apartment__popup').css('right','635px');
       $('.apartment__popup').css('top','60px');
     }
   });
