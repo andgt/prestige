@@ -99,6 +99,9 @@
   line-height: 17px;
   color: #68635f;
 }
+.wpcf7-form-control-wrap {
+  display: flex;
+}
 .wpcf7-list-item-label {
   position: relative;
   font-family: "Google Sans", sans-serif;
@@ -126,9 +129,9 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-.form__item--submit {
-  max-width: 280px;
-  margin: 0 auto;
+.btn__wrap {
+  display: flex;
+  justify-content: center;
 }
 .form__modal-submit {
   background-image: linear-gradient(to top, #c15201, #fe8504);

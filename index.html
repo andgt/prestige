@@ -1053,7 +1053,6 @@
           $(this).css('fill', 'rgba(0, 255, 38, 0.4)');
         };
       }
-
       let popup = $('.apartment__popup');
       $(popup).addClass('apartment__popup--active');
       let top = $(this).offset().top - 100;
@@ -1065,11 +1064,10 @@
 
       $(popup).offset({top:top, left:left});
     });
+
+    $('.floors').mouseleave(function() {
+      $(this).css('fill', 'transparent');
+    });
   })(jQuery);
-
-  /*(function($){
-    $('.svg-floor__link').mouseenter(function() {
-  })(jQuery);*/
-
 </script>
 </html>
