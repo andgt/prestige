@@ -27,26 +27,23 @@
   height: 100%;
 }
 .floors {
-  fill: transparent;
+  fill: rgba(0, 255, 38, 0.5);
   transition: 0.3s ease;
 }
 .floor__apartment-2:hover,
 .floor__apartment-2:focus {
   /*fill: rgba(127, 191, 128, 0.3);*/
   fill: rgba(255, 0, 0, 0.5);
-  stroke: #ff0000;
 }
 .floor__apartment-3:hover,
 .floor__apartment-3:focus {
   /*fill: rgba(254, 191, 148, 0.3);*/
   fill: rgba(255, 255, 0, 0.4);
-  stroke: #ffff00;
 }
 .floor__apartment-4:hover,
 .floor__apartment-4:focus {
   /*fill: rgba(242, 149, 132, 0.3);*/
   fill: rgba(0, 255, 38, 0.4);
-  stroke: #00ff26;
 }
 .floor__apartment-5:hover,
 .floor__apartment-5:focus {
