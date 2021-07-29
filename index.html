@@ -268,48 +268,50 @@
     </div>
   </div>
   <div class="apartment__popup">
-    <h2 class="apartment__subtitle">Подробная информация</h2>
-    <div class="apartment__popup-info">
-      <p class="apartment__popup-text">Номер квартиры: <span class="number-apartment">1</span></p>
-      <p class="apartment__popup-text">Статус: <span class="status">1</span></p>
-      <p class="apartment__popup-text">Этаж: <span class="floor">5</span></p>
-      <p class="apartment__popup-text">Количество комнат: <span class="numbers-room">1</span></p>
-      <p class="apartment__popup-text">Общая площадь: <span class="area">35</span><span>м<sup>2</sup></span></p>
-      <p class="apartment__popup-text">Площадь кухни: <span class="kitchen-area">35</span><span>м<sup>2</sup></span></p>
-      <p class="apartment__popup-text">Площадь санузла: <span class="bathroom-area">35</span><span>м<sup>2</sup></span></p>
-      <p class="apartment__popup-text">Площадь коридора: <span class="corridor-area">35</span><span>м<sup>2</sup></span></p>
-      <p class="apartment__popup-text">Площадь комнат: <span class="rooms-area">35</span><span>м<sup>2</sup></span></p>
-    </div>
-    <div class="apartment__form wpcf7 js-back-call">
-      <form class="wpcf7-form modal__form--backcall">
-        <div class="form__item">
-          <span class="wpcf7-form-control-wrap your-name text-input">
-            <input class="wpcf7-form-control wpcf7-text wpcf7-name modal__form-input--username form__input form__input--modal" type="text" name="your-name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Имя">
-          </span>
-        </div>
-        <div class="form__item">
-          <span class="wpcf7-form-control-wrap your-tel text-input">
-            <input class="wpcf7-form-control wpcf7-text wpcf7-tel form__input form__input--phone form__input--modal" type="tel" name="your-tel" value="" size="40" aria-required="true" aria-invalid="false" placeholder="+7 (___) ___-__-__">
-          </span>
-        </div>
-        <div class="form__item">
-          <span class="wpcf7-form-control-wrap accept">
-            <span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required">
-              <span class="wpcf7-list-item">
-                <label>
-                  <input type="checkbox" name="accept" value="Я даю согласие на обработку персональных данных" checked="checked">
-                  <span class="wpcf7-list-item-label">Я даю согласие на обработку персональных данных</span>
-                </label>
+    <div class="apartment__popup-inner">
+      <h2 class="apartment__subtitle">Подробная информация</h2>
+      <div class="apartment__popup-info">
+        <p class="apartment__popup-text">Номер квартиры: <span class="number-apartment">1</span></p>
+        <p class="apartment__popup-text">Статус: <span class="status">1</span></p>
+        <p class="apartment__popup-text">Этаж: <span class="floor">5</span></p>
+        <p class="apartment__popup-text">Количество комнат: <span class="numbers-room">1</span></p>
+        <p class="apartment__popup-text">Общая площадь: <span class="area">35</span><span>м<sup>2</sup></span></p>
+        <p class="apartment__popup-text">Площадь кухни: <span class="kitchen-area">35</span><span>м<sup>2</sup></span></p>
+        <p class="apartment__popup-text">Площадь санузла: <span class="bathroom-area">35</span><span>м<sup>2</sup></span></p>
+        <p class="apartment__popup-text">Площадь коридора: <span class="corridor-area">35</span><span>м<sup>2</sup></span></p>
+        <p class="apartment__popup-text">Площадь комнат: <span class="rooms-area">35</span><span>м<sup>2</sup></span></p>
+      </div>
+      <div class="apartment__form wpcf7 js-back-call">
+        <form class="wpcf7-form modal__form--backcall">
+          <div class="form__item">
+            <span class="wpcf7-form-control-wrap your-name text-input">
+              <input class="wpcf7-form-control wpcf7-text wpcf7-name modal__form-input--username form__input form__input--modal" type="text" name="your-name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Имя">
+            </span>
+          </div>
+          <div class="form__item">
+            <span class="wpcf7-form-control-wrap your-tel text-input">
+              <input class="wpcf7-form-control wpcf7-text wpcf7-tel form__input form__input--phone form__input--modal" type="tel" name="your-tel" value="" size="40" aria-required="true" aria-invalid="false" placeholder="+7 (___) ___-__-__">
+            </span>
+          </div>
+          <div class="form__item">
+            <span class="wpcf7-form-control-wrap accept">
+              <span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="checkbox" name="accept" value="Я даю согласие на обработку персональных данных" checked="checked">
+                    <span class="wpcf7-list-item-label">Я даю согласие на обработку персональных данных</span>
+                  </label>
+                </span>
               </span>
             </span>
-          </span>
-        </div>
-        <div class="form__item form__item--submit">
-          <div class="btn__wrap btn__wrap--grad">
-            <input class="wpcf7-form-control wpcf7-submit xbtn xbtn--grad button form__modal-submit" type="submit" value="Получить консультацию">
           </div>
-        </div>
-      </form>
+          <div class="form__item form__item--submit">
+            <div class="btn__wrap btn__wrap--grad">
+              <input class="wpcf7-form-control wpcf7-submit xbtn xbtn--grad button form__modal-submit" type="submit" value="Получить консультацию">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </body>
@@ -1045,6 +1047,10 @@
         $('.corridor-area').text(xApartment.corridorArea);
         $('.rooms-area').text(xApartment.roomsArea);
       }
+
+      /*if ($('.status').text('Свободно')) {
+        console.log(15468735);
+      }*/
 
       let popup = $('.apartment__popup');
       $(popup).addClass('apartment__popup--active');
