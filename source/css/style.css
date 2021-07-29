@@ -30,37 +30,40 @@
   fill: transparent;
   transition: 0.3s ease;
 }
-.floor__apartment-2:hover,
+/*.floor__apartment-2:hover,
 .floor__apartment-2:focus {
-  /*fill: rgba(127, 191, 128, 0.3);*/
   fill: rgba(255, 0, 0, 0.4);
 }
+
 .floor__apartment-3:hover,
 .floor__apartment-3:focus {
-  /*fill: rgba(254, 191, 148, 0.3);*/
   fill: rgba(255, 255, 0, 0.4);
 }
+
 .floor__apartment-4:hover,
 .floor__apartment-4:focus {
-  /*fill: rgba(242, 149, 132, 0.3);*/
   fill: rgba(0, 255, 38, 0.4);
 }
+
 .floor__apartment-5:hover,
 .floor__apartment-5:focus {
   fill: rgba(142, 178, 240, 0.3);
 }
+
 .floor__apartment-1:hover,
 .floor__apartment-1:focus {
   fill: rgba(127, 223, 222, 0.3);
 }
+
 .floor__apartment-7:hover,
 .floor__apartment-7:focus {
   fill: rgba(191, 191, 255, 0.3);
 }
+
 .floor__apartment-6:hover,
 .floor__apartment-6:focus {
   fill: rgba(248, 217, 152, 0.3);
-}
+}*/
 .apartment__subtitle {
   font-family: "Google Sans", sans-serif;
   margin: 0 0 20px 0;
@@ -75,7 +78,7 @@
   top: 60px;
   right: 600px;
   width: 450px;
-  padding: 20px 20px 30px 20px;
+  padding: 15px;
   box-shadow: 0 5px 15px -5px #000000;
   background-color: #ffffff;
   transition: 0.3s ease;
@@ -84,6 +87,11 @@
 }
 .apartment__popup--active {
   display: block;
+}
+.apartment__popup-inner {
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #a6a6a6;
+  border-radius: 10px;
 }
 .apartment__popup-info {
   display: flex;
