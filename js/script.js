@@ -1,13 +1,13 @@
-$('.floors').hover (
+/*$('.floors').hover (
   function() {
     $('.apartment__popup').fadeIn();
   },
   function() {
     $('.apartment__popup').fadeOut(50);
   }
-);
+);*/
 
-$(document).ready(function(){
+/*$(document).ready(function(){
   $('.img_wr').mousemove(function(e){
     // положение элемента
     let pos = $(this).offset();
@@ -30,4 +30,4 @@ $(document).ready(function(){
       $('.apartment__popup').css('top','60px');
     }
   });
-});
+});*/

@@ -32,7 +32,7 @@
           <path class="floors floor__apartment-7" d="m 451.63288,387.1543 0,123.37461 v 18.97171 H 560.64771 V 569.7021 H 685.2361 V 311.60575 h -27.07262 l -14.48703,-14.44073 -8.42058,14.44073 -74.60816,0 v 74.8431 z">
         </a>
       </svg>
-      <img class="floor-img" src="img/1-floor.jpg" width="931" height="586" alt="Планировка квартир на первом этаже">
+      <img class="floor-img" src="img/1-floor-bg.jpg" width="931" height="586" alt="Планировка квартир на первом этаже">
     </div>
     <div class="apartment__popup">
       <h2 class="subtitle">Подробная информация</h2>
@@ -395,7 +395,6 @@
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="js/script.js"></script>
 <script>
   (function($){
 
@@ -1126,6 +1125,13 @@
         $('.corridor-area').text(xApartment.corridorArea);
         $('.rooms-area').text(xApartment.roomsArea);
       }
+
+      let popup = $('.apartment__popup');
+      $(popup).addClass('apartment__popup--active');
+      let top = $(this).offset().top;
+      let left = $(this).offset().left + ($(popup).outerWidth() + 30);
+
+      $(popup).offset({top:top, left:left});
     });
   })(jQuery);
 
