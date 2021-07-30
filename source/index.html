@@ -272,7 +272,7 @@
       <h2 class="apartment__subtitle">Подробная информация</h2>
       <div class="apartment__popup-info">
         <p class="apartment__popup-text">Номер квартиры: <span class="number-apartment">1</span></p>
-        <p class="apartment__popup-text">Статус: <span class="status">1</span></p>
+        <p class="apartment__popup-text">Статус: <span class="status">Свободно</span></p>
         <p class="apartment__popup-text">Этаж: <span class="floor">5</span></p>
         <p class="apartment__popup-text">Количество комнат: <span class="numbers-room">1</span></p>
         <p class="apartment__popup-text">Общая площадь: <span class="area">35</span><span>м<sup>2</sup></span></p>
@@ -324,7 +324,7 @@
     xAppsArr = [
       {
         apartment: '1',
-        status: 'Бронь',
+        status: 'Свободно',
         floor: '1',
         numbersOfRoom: '2',
         area: '44.94',
@@ -335,7 +335,7 @@
       },
       {
         apartment: '2',
-        status: 'Продано',
+        status: 'Свободно',
         floor: '1',
         numbersOfRoom: '1',
         area: '49.94',
@@ -346,7 +346,7 @@
       },
       {
         apartment: '3',
-        status: 'Бронь',
+        status: 'Свободно',
         floor: '1',
         numbersOfRoom: '1',
         area: '32.94',
@@ -368,7 +368,7 @@
       },
       {
         apartment: '5',
-        status: 'Продано',
+        status: 'Свободно',
         floor: '1',
         numbersOfRoom: '1',
         area: '49.94',
@@ -390,7 +390,7 @@
       },
       {
         apartment: '7',
-        status: 'Бронь',
+        status: 'Свободно',
         floor: '1',
         numbersOfRoom: '1',
         area: '29.94',
@@ -1017,6 +1017,29 @@
       },
     ]
 
+    $( ".floors" ).each(function(xel,xi) {
+      let xId = $(this).attr('id');
+
+      let xApartment = {
+        status: '',
+      };
+
+      xAppsArr.forEach(function(xel,xi) {
+        if (('app-' + xel.floor + '-' + xel.apartment) == xId) {
+          xApartment = xel
+        }
+      });
+
+      $('.status').text(xApartment.status);
+      if ($('.status').text() === 'Бронь') {
+        $(this, '.floors').css('fill', 'rgba(255, 255, 0, 0.4)');
+      } else if ($('.status').text() === 'Продано') {
+        $(this, '.floors').css('fill', 'rgba(255, 0, 0, 0.4)');
+      } else if ($('.status').text() === 'Свободно') {
+        $(this, '.floors').css('fill', 'rgba(0, 255, 38, 0.4)');
+      };
+    });
+
     $('.floors').mouseenter(function() {
       if (!(window.matchMedia('(max-width: 991px)').matches)) {
         let xId = $(this).attr('id');
@@ -1045,13 +1068,6 @@
         $('.bathroom-area').text(xApartment.bathroomArea);
         $('.corridor-area').text(xApartment.corridorArea);
         $('.rooms-area').text(xApartment.roomsArea);
-        if ($('.status').text() === 'Бронь') {
-          $(this).css('fill', 'rgba(255, 255, 0, 0.4)');
-        } else if ($('.status').text() === 'Продано') {
-          $(this).css('fill', 'rgba(255, 0, 0, 0.4)');
-        } else if ($('.status').text() === 'Свободно') {
-          $(this).css('fill', 'rgba(0, 255, 38, 0.4)');
-        };
       }
       let popup = $('.apartment__popup');
       $(popup).addClass('apartment__popup--active');
