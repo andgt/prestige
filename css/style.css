@@ -28,7 +28,7 @@
 }
 .floors {
   width: 100%;
-  fill: rgba(0, 255, 38, 0.4);
+  fill: transparent;
   transition: 0.3s ease;
 }
 .apartment__subtitle {
