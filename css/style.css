@@ -3,6 +3,39 @@
   max-width: 1100px;
   margin: 5% auto 0 auto;
 }
+.popup__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 931px;
+  margin-bottom: 40px;
+}
+.popup__status-text {
+  position: relative;
+  display: inline-block;
+  padding: 1px 0 1px 30px;
+  font-family: "Google Sans", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+}
+.popup__status-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+.popup__status-text--free::before {
+  background-color: #31d400;
+}
+.popup__status-text--reserve::before {
+  background-color: #ffea00;
+}
+.popup__status-text--sold::before {
+  background-color: #ff0000;
+}
 .img_wr {
   width: 931px;
   position: relative;
@@ -12,7 +45,6 @@
   font-size: 30px;
   text-align: left;
   text-transform: uppercase;
-  padding-bottom: 20px;
 }
 .floor-img {
   display: block;
