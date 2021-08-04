@@ -74,17 +74,31 @@
 .apartment__subtitle,
 .form__subtitle {
   font-family: "Google Sans", sans-serif;
-  margin: 0 0 20px 0;
+  margin: 0;
   padding: 0;
   color: #4a5364;
 }
 .apartment__subtitle {
+  margin-bottom: 20px;
   font-size: 24px;
   text-align: center;
 }
+.form__title-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
 .form__subtitle {
+  margin-bottom: 5px;
   font-size: 18px;
   line-height: 24px;
+}
+.form__description {
+  margin: 0;
+  padding: 0;
+  font-family: "Google Sans", sans-serif;
+  color: #2b2624;
+  font-size: 14px;
+  line-height: 26px;
 }
 .apartment__popup {
   display: none;
@@ -122,7 +136,7 @@
 }
 .apartment__form {
   max-width: 300px;
-  margin: 0 0 auto 0;
+  margin: 70px 0 auto 0;
   padding: 20px;
   box-shadow: 0 5px 15px -5px #000000;
   background-color: #ffffff;
