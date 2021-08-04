@@ -1,6 +1,10 @@
 .popup_plan {
   position: relative;
-  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  max-width: 1271px;
   margin: 5% auto 0 auto;
 }
 .popup__inner {
@@ -41,7 +45,7 @@
   background-color: #ff0000;
 }
 .img_wr {
-  width: 931px;
+  max-width: 931px;
   position: relative;
 }
 .popup_plan .title {
@@ -67,13 +71,20 @@
   fill: transparent;
   transition: 0.3s ease;
 }
-.apartment__subtitle {
+.apartment__subtitle,
+.form__subtitle {
   font-family: "Google Sans", sans-serif;
   margin: 0 0 20px 0;
   padding: 0;
-  font-size: 24px;
   color: #4a5364;
+}
+.apartment__subtitle {
+  font-size: 24px;
   text-align: center;
+}
+.form__subtitle {
+  font-size: 18px;
+  line-height: 24px;
 }
 .apartment__popup {
   display: none;
@@ -110,14 +121,18 @@
   color: #4a5364;
 }
 .apartment__form {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 300px;
+  margin: 0 0 auto 0;
+  padding: 20px;
+  box-shadow: 0 5px 15px -5px #000000;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 .form__item {
-  margin: 0 auto 16px auto;
+  margin: 0 0 16px 0;
 }
 .form__input {
-  flex-grow: 1;
+  max-width: 220px;
   margin: 0;
   padding: 20px 20px 20px 20px;
   font-weight: 400;
