@@ -1127,15 +1127,14 @@
         };
       });
 
-      $('.floors').mouseleave(function() {
-        if ($('.status').text() === 'Бронь') {
-          $(this, '.floors').css({'stroke': 'transparent', 'fill': 'rgba(255, 255, 0, 0.5)'});
-        } else if ($('.status').text() === 'Продано') {
-          $(this, '.floors').css({'stroke': 'transparent', 'fill': 'rgba(255, 0, 0, 0.5)'});
-        } else if ($('.status').text() === 'Свободно') {
-          $(this, '.floors').css({'stroke': 'transparent', 'fill': 'rgba(0, 255, 38, 0.5)'});
-        };
-      });
+      $('.floors').hover (
+        function() {
+          $('.apartment__popup').fadeIn(30);
+        },
+        function() {
+          $('.apartment__popup').fadeOut();
+        }
+      );
 
     $('.floors').mouseenter(function() {
       if (!(window.matchMedia('(max-width: 991px)').matches)) {
@@ -1170,7 +1169,7 @@
       }
 
       let popup = $('.apartment__popup');
-      $(popup).addClass('apartment__popup--active');
+      /*$(popup).fadeIn();*/
       let top = $(this).offset().top - 100;
       let left = $(this).offset().left + 370;
 
@@ -1189,6 +1188,18 @@
 
       $(popup).offset({top:top, left:left});
     });
+
+    $('.floors').mouseleave(function() {
+      /*let popup = $('.apartment__popup');
+        $(popup).fadeOut(30);*/
+        if ($('.status').text() === 'Бронь') {
+          $(this, '.floors').css({'stroke': 'transparent', 'fill': 'rgba(255, 255, 0, 0.5)'});
+        } else if ($('.status').text() === 'Продано') {
+          $(this, '.floors').css({'stroke': 'transparent', 'fill': 'rgba(255, 0, 0, 0.5)'});
+        } else if ($('.status').text() === 'Свободно') {
+          $(this, '.floors').css({'stroke': 'transparent', 'fill': 'rgba(0, 255, 38, 0.5)'});
+        };
+      });
   })(jQuery);
 </script>
 </html>
