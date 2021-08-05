@@ -67,6 +67,7 @@
   height: 100%;
 }
 .floors {
+  position: absolute;
   width: 100%;
   fill: transparent;
   transition: 0.3s ease;
