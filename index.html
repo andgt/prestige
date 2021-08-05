@@ -1456,8 +1456,9 @@
       let myPath = $(this).find('.floors')[0];
       let w1 = myPath.getBoundingClientRect().width;
       let w2 = popup.outerWidth();
+      let w3 = myPath.getBoundingClientRect().height;
 
-      let top = $(this).offset().top + $(popup).outerHeight() - 350;
+      let top = $(this).offset().top + w3 - 350;
       let left = $(this).offset().left + w1/2 + w2/2;
 
       /*let top = $(this).offset().top - 100;
