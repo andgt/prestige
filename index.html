@@ -1488,11 +1488,11 @@
       let top = $(this).offset().top - 100;
       let left = $(this).offset().left + 370;
 
-      if ($(this).offset().left > 650) {
+      /*if ($(this).offset().left > 650) {
         left = $(this).offset().left - 494;
-      }
+      }*/
 
-      /*if (screen.width < 600) {
+      if (screen.width < 600) {
         top = $(this).offset().top + 320;
         left = 0;
         $('.form__description-text').removeClass('form__description-text--active');
@@ -1508,9 +1508,9 @@
 
       if (screen.width < 600 && $(this).offset().left > 244) {
         left = $(this).offset().left - 234;
-      }*/
+      }
 
-      $(popup).offset({top:top, left:left});
+      $(popup).css({top:top, left:left});
     });
 
     $('.floors').mouseleave(function() {
