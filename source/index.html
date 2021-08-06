@@ -697,16 +697,39 @@
       }
     });
 
-    $('.svg-floor__link').mouseenter(function() {
+    $('.svg-floor__link').mouseenter(function(e) {
       let popup = $('.apartment__popup');
 
-      let myPath = $(this).find('.floors')[0];
+      /*let myPath = $(this).find('.floors')[0];
       let w1 = myPath.getBoundingClientRect().width;
       let w2 = popup.outerWidth();
-      let h3 = myPath.getBoundingClientRect();
-      /*console.log(window.scrollY);*/
-      let top = window.scrollY + 100;
-      let left = $(this).offset().left + w1/2 + w2/2;
+      let h3 = myPath.getBoundingClientRect();*/
+      /*console.log('pageX - ' + e.pageX + ' pageY - ' + e.pageY);*/
+
+      let top = e.pageY - 150;
+      let left = e.pageX + 200;
+
+      if (e.pageX > 700) {
+        left = e.pageX - ((popup.width() + 100));
+      }
+
+      if (e.pageX > 890) {
+        left = e.pageX - ((popup.width() + 200));
+      }
+
+      if (e.pageX > 1011) {
+        left = e.pageX - ((popup.width()) + 250);
+      }
+
+      if (screen.width < 600) {
+        top = e.pageY + 120;
+        left = 0;
+        $('.form__description-text').removeClass('form__description-text--active');
+      }
+
+      if (screen.width < 600 && e.pageX > 645) {
+        left = e.pageX - 634;
+      }
 
       /*let top = $(this).offset().top - 100;
       let left = $(this).offset().left + 370;*/
