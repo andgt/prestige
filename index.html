@@ -700,25 +700,33 @@
     $('.svg-floor__link').mouseenter(function(e) {
       let popup = $('.apartment__popup');
 
-      /*let myPath = $(this).find('.floors')[0];
-      let w1 = myPath.getBoundingClientRect().width;
-      let w2 = popup.outerWidth();
-      let h3 = myPath.getBoundingClientRect();*/
-      /*console.log('pageX - ' + e.pageX + ' pageY - ' + e.pageY);*/
+      console.log('pageX - ' + e.pageX + ' pageY - ' + e.pageY);
 
       let top = e.pageY - 150;
-      let left = e.pageX + 200;
+      let left = e.pageX + 370;
 
-      if (e.pageX > 700) {
+      /*if (e.pageX > 700) {
         left = e.pageX - ((popup.width() + 100));
+      }*/
+
+      if (e.pageX > 384) {
+        left = e.pageX + 300;
+      }
+
+      if (e.pageX > 640) {
+        left = e.pageX + 150;
+      }
+
+      if (e.pageX > 780) {
+        left = e.pageX - ((popup.width() + 150));
       }
 
       if (e.pageX > 890) {
-        left = e.pageX - ((popup.width() + 200));
+        left = e.pageX - ((popup.width() + 260));
       }
 
       if (e.pageX > 1011) {
-        left = e.pageX - ((popup.width()) + 250);
+        left = e.pageX - ((popup.width()) + 280);
       }
 
       if (screen.width < 600) {
@@ -730,27 +738,6 @@
       if (screen.width < 600 && e.pageX > 645) {
         left = e.pageX - 634;
       }
-
-      /*let top = $(this).offset().top - 100;
-      let left = $(this).offset().left + 370;*/
-
-      /*if (screen.width < 600) {
-        top = $(this).offset().top + 320;
-        left = 0;
-        $('.form__description-text').removeClass('form__description-text--active');
-      }
-
-      if ($(this).offset().left > 500) {
-        left = $(this).offset().left + 234;
-      }
-
-      if ($(this).offset().left > 650) {
-        left = $(this).offset().left - 494;
-      }
-
-      if (screen.width < 600 && $(this).offset().left > 244) {
-        left = $(this).offset().left - 234;
-      }*/
 
       $(popup).offset({top:top, left:left});
     });
@@ -1507,8 +1494,6 @@
         $('.apartment__popup').fadeOut();
       }
     );
-
-
 
     $('.floors').mouseenter(function() {
       if (!(window.matchMedia('(max-width: 991px)').matches)) {
