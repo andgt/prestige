@@ -697,6 +697,41 @@
       }
     });
 
+    $('.svg-floor__link').mouseenter(function() {
+      let popup = $('.apartment__popup');
+
+      let myPath = $(this).find('.floors')[0];
+      let w1 = myPath.getBoundingClientRect().width;
+      let w2 = popup.outerWidth();
+      let h3 = myPath.getBoundingClientRect();
+      /*console.log(window.scrollY);*/
+      let top = window.scrollY + 100;
+      let left = $(this).offset().left + w1/2 + w2/2;
+
+      /*let top = $(this).offset().top - 100;
+      let left = $(this).offset().left + 370;*/
+
+      /*if (screen.width < 600) {
+        top = $(this).offset().top + 320;
+        left = 0;
+        $('.form__description-text').removeClass('form__description-text--active');
+      }
+
+      if ($(this).offset().left > 500) {
+        left = $(this).offset().left + 234;
+      }
+
+      if ($(this).offset().left > 650) {
+        left = $(this).offset().left - 494;
+      }
+
+      if (screen.width < 600 && $(this).offset().left > 244) {
+        left = $(this).offset().left - 234;
+      }*/
+
+      $(popup).offset({top:top, left:left});
+    });
+
     //. Перечисление квартир и их характеристик, подставляется потом в tooltip
     xAppsArr = [
       {
@@ -1450,40 +1485,7 @@
       }
     );
 
-    $('.svg-floor__link').mouseenter(function() {
-      let popup = $('.apartment__popup');
 
-      let myPath = $(this).find('.floors')[0];
-      let w1 = myPath.getBoundingClientRect().width;
-      let w2 = popup.outerWidth();
-      let w3 = myPath.getBoundingClientRect().height;
-
-      let top = $(this).offset().top + w3 - 350;
-      let left = $(this).offset().left + w1/2 + w2/2;
-
-      /*let top = $(this).offset().top - 100;
-      let left = $(this).offset().left + 370;*/
-
-      /*if (screen.width < 600) {
-        top = $(this).offset().top + 320;
-        left = 0;
-        $('.form__description-text').removeClass('form__description-text--active');
-      }
-
-      if ($(this).offset().left > 500) {
-        left = $(this).offset().left + 234;
-      }
-
-      if ($(this).offset().left > 650) {
-        left = $(this).offset().left - 494;
-      }
-
-      if (screen.width < 600 && $(this).offset().left > 244) {
-        left = $(this).offset().left - 234;
-      }*/
-
-      $(popup).offset({top:top, left:left});
-    });
 
     $('.floors').mouseenter(function() {
       if (!(window.matchMedia('(max-width: 991px)').matches)) {
