@@ -47,7 +47,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -120,7 +119,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -193,7 +191,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -266,7 +263,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -339,7 +335,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -412,7 +407,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -485,7 +479,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -558,7 +551,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -631,7 +623,6 @@
       <form class="wpcf7-form modal__form--backcall">
         <div class="form__title-container">
           <h2 class="form__subtitle">Заполните форму</h2>
-          <p class="form__description"><span>и мы с Вами свяжемся</span> <span class="form__description-text form__description-text--active">в ближайшее&nbsp;время</span></p>
         </div>
         <div class="form__item">
           <span class="wpcf7-form-control-wrap your-name text-input">
@@ -697,19 +688,34 @@
       }
     });
 
-    $('.svg-floor__link').mouseenter(function(e) {
+    $('.img_wr').mouseenter(function() {
+      let popup = $('.apartment__popup');
+      let top = $(this).offset().top;
+      let left = $(this).offset().left + 973;
+
+      if (screen.width < 1300) {
+        left = $(this).offset().left + 950;
+      }
+
+      $(popup).offset({top:top, left:left});
+    });
+
+    /*$('.svg-floor__link').mouseenter(function(e) {
       let popup = $('.apartment__popup');
 
-      console.log('pageX - ' + e.pageX + ' pageY - ' + e.pageY);
+      console.log($('.img_wr').width());*/
 
-      let top = e.pageY - 150;
-      let left = e.pageX + 370;
+      /*let top = e.pageY - 150;
+      let left = e.pageX + 370;*/
+
+      /*let top = e.pageY - 150;
+      let left = $('.img_wr').width() + 330;*/
 
       /*if (e.pageX > 700) {
         left = e.pageX - ((popup.width() + 100));
       }*/
 
-      if (e.pageX > 384) {
+      /*if (e.pageX > 384) {
         left = e.pageX + 300;
       }
 
@@ -737,10 +743,10 @@
 
       if (screen.width < 600 && e.pageX > 645) {
         left = e.pageX - 634;
-      }
+      }*/
 
-      $(popup).offset({top:top, left:left});
-    });
+      /*$(popup).offset({top:top, left:left});
+    });*/
 
     //. Перечисление квартир и их характеристик, подставляется потом в tooltip
     xAppsArr = [
@@ -1486,14 +1492,14 @@
       };
     });
 
-    $('.floors').hover (
+    /*$('.floors').hover (
       function() {
         $('.apartment__popup').fadeIn(30);
       },
       function() {
         $('.apartment__popup').fadeOut();
       }
-    );
+    );*/
 
     $('.floors').mouseenter(function() {
       if (!(window.matchMedia('(max-width: 991px)').matches)) {
