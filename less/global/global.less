@@ -92,18 +92,18 @@
 }
 
 .apartment__subtitle {
-  margin-bottom: 20px;
-  font-size: 24px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 22px;
   text-align: center;
 }
 
 .form__title-container {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .form__subtitle {
-  margin-bottom: 5px;
   /*font-size: 18px;
   line-height: 24px;*/
   font-size: 16px;
@@ -132,7 +132,7 @@
   position: absolute;
   /*top: 60px;
   right: 600px;*/
-  width: 450px;
+  width: 280px;
   padding: 10px;
   box-shadow: 0 5px 15px -5px #000000;
   background-color: #ffffff;
@@ -153,6 +153,7 @@
 
 .apartment__popup-info {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -164,7 +165,7 @@
   font-size: 14px;
   line-height: 16px;
   width: 210px;
-  margin: 0 0 20px 0;
+  margin: 0 0 7px 0;
   color: #4a5364;
 }
 
@@ -190,7 +191,7 @@
 .form__input {
   max-width: 215px;
   margin: 0;
-  padding: 20px 20px 20px 20px;
+  padding: 10px;
   font-weight: 400;
   font-style: normal;
   border: 1px solid #68635f;
@@ -209,11 +210,13 @@
 
 .wpcf7-list-item-label {
   position: relative;
+  display: inline-block;
   font-family: "Google Sans", sans-serif;
   color: #2b2624;
+  /*margin-top: 8px;*/
   padding-left: 15px;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 9px;
+  line-height: 12px;
 }
 
 input[type="checkbox"] {
@@ -227,7 +230,7 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
 .wpcf7-list-item-label::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: -11px;
   width: 18px;
   height: 18px;
@@ -245,12 +248,12 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   background-image: linear-gradient(to top, #c15201, #fe8504);
   box-shadow: 0 4px 0 #8a3c18;
   padding: 0 25px;
-  line-height: 50px;
-  height: 50px;
+  /*line-height: 50px;*/
+  height: 40px;
   font-weight: 500;
   color: #ffffff;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   display: inline-block;
   text-shadow: 0.5px 0.9px 1px #8a3c18;
