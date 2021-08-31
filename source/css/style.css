@@ -162,6 +162,18 @@
 .form__item {
   margin: 0 0 10px 0;
 }
+.form__item--messenger {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60px;
+  margin: 0 auto 10px auto;
+}
+.form__messenger-icon {
+  transition: 0.3s ease;
+}
+.form__messenger-icon:hover {
+  transform: scale(1.05);
+}
 .form__input {
   max-width: 215px;
   margin: 0;
@@ -238,6 +250,9 @@ input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   background: #ff8607;
   transform: translateY(2px);
   box-shadow: 0 2px 0 #8a3c18;
+}
+.form__messenger-icon {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
